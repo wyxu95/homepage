@@ -1,0 +1,11 @@
+name = "nooxy-wenyuanxu"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# 确保设置你的 Cloudflare 账户 ID
+account_id = "90db0c25143e16f07fa0dc89515d1667"
+
+# 绑定你要部署的域名
+route = "wenyuanxu.net/*"
+
+workers_dev = false
