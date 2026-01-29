@@ -126,7 +126,7 @@ export const SITE_CONFIG = {
 
     // Meta keywords for SEO (comma-separated)
     // Adds <meta name="keywords"> tag
-    keywords: 'wenyuanxu',
+    keywords: 'wenyuanxu, 徐文远',
 
     // Default author for all pages
     // Used when page-specific author isn't set in pageMetadata
@@ -149,13 +149,13 @@ export const SITE_CONFIG = {
   // OPTIONAL: Nooxy Configuration
   // ============================================================================
 
-  // nooxy: {
-  //   // Show "Made with Nooxy" badge in header
-  //   // Default: true
-  //   // Set to false to hide it... 💔 it'll break my heart, but hey,
-  //   // if it helps your site look cleaner, I'll survive... probably 😢
-  //   showBadge: true,
-  // },
+  nooxy: {
+    // Show "Made with Nooxy" badge in header
+    // Default: true
+    // Set to false to hide it... 💔 it'll break my heart, but hey,
+    // if it helps your site look cleaner, I'll survive... probably 😢
+    showBadge: false,
+  },
 
   // ============================================================================
   // ADVANCED: Custom Code Injection
