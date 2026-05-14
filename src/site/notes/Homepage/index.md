@@ -43,11 +43,14 @@ Currently, I'm interested in **Program Analysis** and **Software Security**.
 - STATIC 2026 program committee member
 - TA, **Compiler @ AU**, 2022 Autumn
 # Education / Work Experience
-| Position | Period |
-| --- | --- |
-| **Ph.D. Student**<br>[PLS group, Department of Computer Science, Aarhus University](https://cs.au.dk/research/programming-languages-logic-and-software-security)<br>Advisor: [Anders Møller](https://cs.au.dk/~amoeller/) | August 2022 – Present<br>Aarhus, Denmark |
-| **Security Engineer**<br>[Alibaba Security Department](https://s.alibaba.com/) | August 2020 – July 2022<br>Hangzhou, China |
-| **Graduate Student**<br>[Software Engineering, Nanjing University](https://software.nju.edu.cn/English/index.html) | September 2018 – July 2020<br>Nanjing, China |
-| **Undergraduate Student**<br>[Network Engineering School, Yangzhou University](http://english.yzu.edu.cn/) | September 2014 – June 2018<br>Yangzhou, China |
+| Position                                                                                                                                                                                                                  | Period                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| **Ph.D. Student**<br>[PLS group, Department of Computer Science, Aarhus University](https://cs.au.dk/research/programming-languages-logic-and-software-security)<br>Advisor: [Anders Møller](https://cs.au.dk/~amoeller/) | August 2022 – Present<br>Aarhus, Denmark      |
+| **Security Engineer**<br>[Alibaba Security Department](https://s.alibaba.com/)                                                                                                                                            | August 2020 – July 2022<br>Hangzhou, China    |
+| **Graduate Student**<br>[Software Engineering, Nanjing University](https://software.nju.edu.cn/English/index.html)                                                                                                        | September 2018 – July 2020<br>Nanjing, China  |
+| **Undergraduate Student**<br>[Network Engineering School, Yangzhou University](http://english.yzu.edu.cn/)                                                                                                                | September 2014 – June 2018<br>Yangzhou, China |
 # Other Interests
-* TODO
+* I enjoy reading novels, including _Flowers for Algernon_, _Gone with the Wind_, and _Fortress Besieged_ (围城), etc.
+* I also enjoy watching Japanese anime/dramas and Western science fiction films or TV series, such as _From the New World_ (新世界より), _Shiroi Kyotō_ (白い巨塔), _Tokyo Love Story_ (東京ラブストーリー), and _Black Mirror_, etc.
+*If you have similar interests or recommendations, please feel free to contact me!
+/
