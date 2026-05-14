@@ -1,0 +1,12 @@
+<script defer src="https://unpkg.com/lucide@latest"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll("[icon-name]").forEach((icon) => {
+      icon.setAttribute("data-lucide", icon.getAttribute("icon-name"));
+      icon.removeAttribute("icon-name");
+    });
+    lucide.createIcons({
+      attrs: { class: ['svg-icon'] }
+    });
+  });
+</script>
