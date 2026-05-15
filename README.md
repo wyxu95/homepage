@@ -5,13 +5,13 @@ This repository is a Digital Garden static site for Wenyuan Xu's personal homepa
 The editable source note lives in the Obsidian vault:
 
 ```text
-/Users/wenyuan/Documents/Obsidian Vault/Homepage/index.md
+/Users/wenyuan/Documents/Obsidian Vault/Wenyuan Xu/index.md
 ```
 
 The avatar used by the note lives next to it:
 
 ```text
-/Users/wenyuan/Documents/Obsidian Vault/Homepage/avatar.jpg
+/Users/wenyuan/Documents/Obsidian Vault/Wenyuan Xu/_assets_index/IMG-20260515100457094.jpg
 ```
 
 Publish from Obsidian with:
