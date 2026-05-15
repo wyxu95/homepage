@@ -20,11 +20,6 @@
             }
         });
 
-        document.querySelectorAll("[icon-name]").forEach((icon) => {
-            icon.setAttribute("data-lucide", icon.getAttribute("icon-name"));
-            icon.removeAttribute("icon-name");
-        });
-
         lucide.createIcons();
 
         // Collapse callouts
