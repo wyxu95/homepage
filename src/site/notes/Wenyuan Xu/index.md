@@ -10,7 +10,7 @@
 > ## Contacts
 > - Email: [wenyuan.xu@cs.au.dk](mailto:wenyuan.xu@cs.au.dk)
 > - Address: Turning-222, IT-parken, Aabogade 34, Aarhus, 8200
-> - Zoom: [Meeting link](https://aarhusuniversity.zoom.us/my/wenyuanxu)
+> - Zoom: [Schedule a meeting](https://scheduler.zoom.us/wenyuan-xu/meeting)
 >
 > ### Links
 > - [Twitter](https://twitter.com/wyxu95)
