@@ -46,6 +46,12 @@ function publish(snapshot = document, token = "test-token") {
 }
 
 describe("published SiYuan homepage", () => {
+  it("serves no plugin archive from the retired public download URL", async () => {
+    const response = await onRequest(context("/downloads/siyuan-homepage-publisher.zip"));
+    expect(response.status).toBe(404);
+    expect(response.headers.get("Cache-Control")).toBe("no-store");
+  });
+
   it("preserves layout hooks, links and attachment bytes", () => {
     const html = renderHomepage(document, template);
     expect(html).toContain('data-callout="profile"');

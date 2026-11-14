@@ -6,7 +6,7 @@ The homepage at https://wenyuanxu.net/ publishes the `index` document in the **W
 
 Click the top-bar publish button in either the desktop client or the server's browser client. The plugin exports that client's current Markdown and referenced images. Cloudflare renders the existing homepage layout and atomically stores the published HTML in a shared Durable Object. When the plugin reports success, refreshing the website immediately reads the published version. Draft edits remain in SiYuan until the next publication.
 
-The plugin source is in `plugins/siyuan-homepage-publisher`, and its installation archive is available at https://wenyuanxu.net/downloads/siyuan-homepage-publisher.zip. Configure the publish endpoint, document ID and publish key in the plugin settings. Existing local Windows and server installations are configured separately in their private plugin storage.
+The plugin source and installation archive are maintained in the private repository https://github.com/wyxu95/siyuan-homepage-publisher and its Releases. Configure the publish endpoint, document ID and publish key in the plugin settings. Existing local Windows and server installations are configured separately in their private plugin storage.
 
 Cloudflare Pages project `homepage` uses the production Secret `HOMEPAGE_PUBLISH_TOKEN` and the `HOMEPAGE_PUBLICATION` Durable Object binding exported by Worker `wenyuan-homepage-publication`. The Worker's source and migrations are in `cloudflare/`. The corresponding owner credential is in `/home/ubuntu/siyuan/mcp/credentials.env` on `oracleg`. The existing read-only homepage MCP endpoint remains available for owner tools.
 

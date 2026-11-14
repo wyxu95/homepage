@@ -53,6 +53,7 @@ async function publish(context) {
 export async function onRequest(context) {
   const { request, env } = context;
   const path = new URL(request.url).pathname;
+  if (path === "/downloads/siyuan-homepage-publisher.zip") return new Response("Not found", { status: 404, headers: { "Cache-Control": "no-store" } });
   if (path === publishPath) return publish(context);
   if (!["/", "/wenyuan-xu/index/"].includes(path)) return context.next();
   if (!["GET", "HEAD"].includes(request.method)) return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, HEAD" } });
