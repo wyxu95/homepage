@@ -1,4 +1,15 @@
 # Digital Obsidian Garden
+
+## SiYuan homepage
+
+The homepage at https://wenyuanxu.net/ reads the `index` document in the **Wenyuan Xu** SiYuan notebook through `https://siyuan-mcp.wenyuanxu.net/homepage/mcp`.
+
+Cloudflare Pages Functions renders the Markdown using the existing homepage layout and caches the complete page, including its referenced images. Active visitors trigger a background update after 60 seconds; a following refresh shows the updated note. Cached content remains available during MCP outages, and the repository's static page provides the initial fallback.
+
+Configure `SIYUAN_HOMEPAGE_TOKEN` as a production Secret in Cloudflare Pages project `homepage`. The matching server credential and document ID are configured in `/home/ubuntu/siyuan/mcp/credentials.env` on `oracleg`. Edit the SiYuan note to update the public content; changes to the layout remain in this repository.
+
+Validation: `npx vitest run --globals`, `npm run build`, and `npx wrangler pages functions build`.
+
 This is the template to be used together with the [Digital Garden Obsidian Plugin](https://github.com/oleeskild/Obsidian-Digital-Garden).
 See the README in the plugin repo for information on how to set it up.
 
