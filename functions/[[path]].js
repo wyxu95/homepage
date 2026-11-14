@@ -36,7 +36,7 @@ async function refresh(context, key, cached) {
   if (document.unchanged && cached) {
     html = await cached.text();
   } else {
-    const template = await context.next();
+    const template = await context.next(new Request(context.request, { method: "GET" }));
     if (!template.ok) throw new Error("Homepage template is unavailable");
     html = renderHomepage(document, await template.text());
   }
@@ -63,7 +63,7 @@ export async function onRequest(context) {
   if (!["/", "/wenyuan-xu/index/"].includes(url.pathname)) return context.next();
   if (!["GET", "HEAD"].includes(context.request.method)) return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, HEAD" } });
   if (!context.env.SIYUAN_HOMEPAGE_TOKEN) return context.next();
-  const key = new Request(`${url.origin}/__siyuan_homepage_cache_v1`);
+  const key = new Request(`${url.origin}/__siyuan_homepage_cache_v2`);
   const cached = await caches.default.match(key);
   const age = Date.now() - Number(cached?.headers.get("X-Siyuan-Checked-At") || 0);
   if (cached && age < freshness) return visitorResponse(cached, context.request.method);

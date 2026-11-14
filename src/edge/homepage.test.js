@@ -62,6 +62,17 @@ describe("SiYuan homepage", () => {
     expect(second.headers.get("Cache-Control")).toContain("max-age=0");
   });
 
+  it("fetches a GET template for a first HEAD request and keeps the cached body", async () => {
+    const request = context();
+    request.request = new Request(request.request, { method: "HEAD" });
+    request.next.mockImplementation(async forwarded => new Response(forwarded?.method === "GET" ? template : null));
+    const head = await onRequest(request);
+    expect(await head.text()).toBe("");
+    expect(request.next.mock.calls[0][0].method).toBe("GET");
+    const get = await onRequest(context());
+    expect(await get.text()).toContain("Updated from SiYuan.");
+  });
+
   it("refreshes stale content with the previous revision", async () => {
     await onRequest(context());
     const key = [...entries.keys()][0];

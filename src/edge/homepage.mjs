@@ -46,5 +46,6 @@ export function renderHomepage(document, template) {
     if (asset) element.setAttribute(attribute, `data:${asset.type};base64,${asset.base64}`);
   }
   if (!body.querySelector("h1")) throw new Error("Homepage has no heading");
+  if (!/<main\b[^>]*>[\s\S]*?<\/main>/.test(template)) throw new Error("Homepage template has no main content");
   return template.replace(/(<main\b[^>]*>)[\s\S]*?(<\/main>)/, (_, start, end) => start + body.innerHTML + end);
 }
