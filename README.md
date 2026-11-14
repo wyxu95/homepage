@@ -2,11 +2,13 @@
 
 ## SiYuan homepage
 
-The homepage at https://wenyuanxu.net/ reads the `index` document in the **Wenyuan Xu** SiYuan notebook through `https://siyuan-mcp.wenyuanxu.net/homepage/mcp`.
+The homepage at https://wenyuanxu.net/ publishes the `index` document in the **Wenyuan Xu** SiYuan notebook with the **发布主页 / Publish Homepage** plugin.
 
-Cloudflare Pages Functions renders the Markdown using the existing homepage layout and caches the complete page, including its referenced images. Active visitors trigger a background update after 60 seconds; a following refresh shows the updated note. Cached content remains available during MCP outages, and the repository's static page provides the initial fallback.
+Click the top-bar publish button in either the desktop client or the server's browser client. The plugin exports that client's current Markdown and referenced images. Cloudflare renders the existing homepage layout and atomically stores the published HTML in a shared Durable Object. When the plugin reports success, refreshing the website immediately reads the published version. Draft edits remain in SiYuan until the next publication.
 
-Configure `SIYUAN_HOMEPAGE_TOKEN` as a production Secret in Cloudflare Pages project `homepage`. The matching server credential and document ID are configured in `/home/ubuntu/siyuan/mcp/credentials.env` on `oracleg`. Edit the SiYuan note to update the public content; changes to the layout remain in this repository.
+The plugin source is in `plugins/siyuan-homepage-publisher`, and its installation archive is available at https://wenyuanxu.net/downloads/siyuan-homepage-publisher.zip. Configure the publish endpoint, document ID and publish key in the plugin settings. Existing local Windows and server installations are configured separately in their private plugin storage.
+
+Cloudflare Pages project `homepage` uses the production Secret `HOMEPAGE_PUBLISH_TOKEN` and the `HOMEPAGE_PUBLICATION` Durable Object binding exported by Worker `wenyuan-homepage-publication`. The Worker's source and migrations are in `cloudflare/`. The corresponding owner credential is in `/home/ubuntu/siyuan/mcp/credentials.env` on `oracleg`. The existing read-only homepage MCP endpoint remains available for owner tools.
 
 Validation: `npx vitest run --globals`, `npm run build`, and `npx wrangler pages functions build`.
 

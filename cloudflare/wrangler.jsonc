@@ -1,0 +1,8 @@
+{
+  "name": "wenyuan-homepage-publication",
+  "main": "publication.js",
+  "compatibility_date": "2026-11-14",
+  "workers_dev": false,
+  "durable_objects": { "bindings": [{ "name": "HOMEPAGE_PUBLICATION", "class_name": "HomepagePublication" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["HomepagePublication"] }]
+}
